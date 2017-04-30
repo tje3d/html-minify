@@ -1,4 +1,4 @@
-<?php namespace Yocmen\HtmlMinify;
+<?php namespace Tje3d\HtmlMinify;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Engines\CompilerEngine;

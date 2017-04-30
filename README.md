@@ -1,5 +1,5 @@
 # Laravel 5 HTML Minify
-This package is originally from https://github.com/fitztrev/laravel-html-minify i just updated the package and made it compatible with laravel 5.
+`This package is originally from https://github.com/fitztrev/laravel-html-minify i just updated the package and made it compatible with laravel 5`, And i forked and make it simple 😁
 
 ## About
 
@@ -18,29 +18,12 @@ Test Page | w/o Gzip | w/ Gzip | w/ Gzip + Laravel HTML Minify
 
 ## Installation
 
-1. Add `"yocmen/html-minify": "2.*"` to **composer.json**.
-2. Run `composer update`
-3. Add `Yocmen\HtmlMinify\HtmlMinifyServiceProvider` to the list of providers in **config/app.php**.
-4. Publish your config with `php artisan vendor:publish` command
-5. **Important:** You won't see any changes until you edit your `*.blade.php` template files. Once Laravel detects a change, it will recompile them, which is when this package will go to work. To force all views to be recompiled, just run this command: `find . -name "*.blade.php" -exec touch {} \;`
+1. composer require tje3d/html-minify
+1. Add `Yocmen\HtmlMinify\HtmlMinifyServiceProvider::class` to the list of providers in **config/app.php**.
+1. Publish your config with `php artisan vendor:publish` command
+1. **Important:** You won't see any changes until you edit your `*.blade.php` template files. Once Laravel detects a change, it will recompile them, which is when this package will go to work. To force all views to be recompiled, just run this command: `find . -name "*.blade.php" -exec touch {} \;`
 
 
 ### Options
 
 - **`enabled`** - *boolean*, default **true**
-- **`comment_stripping`** - *boolean*, default **true**
-
-If you are using a javascript framework that conflicts with Blade's tags, you can change them.
-
-- **`blade.rawTags`** - *array*, default `{!!` and `!!}`
-- **`blade.contentTags`** - *array*, default `{{` and `}}`
-- **`blade.escapedContentTags`** - *array*, default `{{{` and `}}}`
-
-#### Skipping minification
-
-To prevent the minification of a view file, add `skipmin` somewhere in the view.
-
-```
-{{-- skipmin --}}
-<!-- skipmin -->
-```

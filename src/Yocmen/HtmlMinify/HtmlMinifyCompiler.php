@@ -1,5 +1,5 @@
 <?php
-namespace Yocmen\HtmlMinify;
+namespace Tje3d\HtmlMinify;
 
 use Illuminate\View\Compilers\BladeCompiler;
 
