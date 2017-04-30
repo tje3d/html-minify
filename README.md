@@ -21,7 +21,7 @@ Test Page | w/o Gzip | w/ Gzip | w/ Gzip + Laravel HTML Minify
 1. composer require tje3d/html-minify
 1. Add `Tje3d\HtmlMinify\HtmlMinifyServiceProvider::class` to the list of providers in **config/app.php**.
 1. Publish your config with `php artisan vendor:publish` command
-1. **Important:** You won't see any changes until you edit your `*.blade.php` template files. Once Laravel detects a change, it will recompile them, which is when this package will go to work. To force all views to be recompiled, just run this command: `find . -name "*.blade.php" -exec touch {} \;`
+1. php artisan view:clear
 
 
 ### Options
